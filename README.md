@@ -26,7 +26,7 @@ This project helps developers and script writers maintain `compatibility` when t
 
 | Function       | Status   |
 |----------------|----------|
-| `getgc`        | ❌       |
+| `getgc`        | ✅       |
 
 ---
 
