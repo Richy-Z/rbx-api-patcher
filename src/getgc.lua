@@ -18,14 +18,7 @@ local function getgc(includeTables)
         seen[obj] = true
 
         local t = typeof(obj)
-        local add = false
-        if t == "function" or t == "userdata" then
-            add = true
-        elseif t == "table" and includeTables then
-            add = true
-        end
-
-        if add then
+        if (t == "table" and includeTables) or (t == "function" or t == "userdata") then
             table.insert(results, obj)
         end
 
