@@ -110,4 +110,4 @@ local function filtergc(filterType, filterOptions, returnOne)
     return results
 end
 
-getgenv().filtergc = filtergc
+return filtergc

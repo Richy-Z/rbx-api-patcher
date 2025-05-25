@@ -1,7 +1,7 @@
 local get_module = loadstring(game:HttpGet("https://raw.githubusercontent.com/andromeda-oss/rbx-api-patcher/main/module_helper.lua"))()
-local getgc = loadstring(game:HttpGet(get_module("getgc")))()
+local get_gc = loadstring(game:HttpGet(get_module("getgc")))()
 
-getgenv().getgc = getgc
+getgenv().getgc = get_gc
 
 function my_global_func()
     print("Hello from global function")
