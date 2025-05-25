@@ -1,27 +1,27 @@
 local get_module = loadstring(game:HttpGet("https://raw.githubusercontent.com/andromeda-oss/rbx-api-patcher/main/module_helper.lua"))()
 
 local function filtergc(filterType, filterOptions, returnOne)
-    local getgc = getgenv().getgc
-    local islclosure = getgenv().islclosure
-    if not getgc then
+    local get_gc = getgenv().getgc
+    local is_l_closure = getgenv().islclosure
+    if not get_gc then
         local success, result = pcall(function()
             return loadstring(game:HttpGet(get_module("getgc")))()
         end)
         if not success then
             error("filtergc: failed to load getgc from module")
         end
-        getgc = result
-        getgenv().getgc = getgc
+        get_gc = result
+        getgenv().getgc = get_gc
     end
-    if not islclosure then
+    if not is_l_closure then
         local success, result = pcall(function()
             return loadstring(game:HttpGet(get_module("islclosure")))()
         end)
         if not success then
             error("filtergc: failed to load islclosure from module")
         end
-        islclosure = result
-        getgenv().islclosure = islclosure
+        is_l_closure = result
+        getgenv().islclosure = is_l_closure
     end
 
     local includeTables = filterType == "table"
