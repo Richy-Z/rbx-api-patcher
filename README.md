@@ -41,3 +41,7 @@ rbx-api-patcher/
 └── README.md
 ```
 
+## 🙏 Acknowledgments
+
+This project was made possible in part thanks to [docs.sunc.su](https://docs.sunc.su), which was a huge help for referencing accurate function behavior and signatures.
+
